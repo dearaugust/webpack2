@@ -26,3 +26,33 @@
 
 ## HTML 打包 简化了HTML文件的创建，以便为您的webpack包提供服务
 - npm install --save-dev html-webpack-plugin
+
+## 装暴露全局变量 包
+- npm i -D expose-loader
+```js
+  {
+    test:require.resolve('jquery'),
+    use: [{
+      loader: 'expose-loader',
+      options: '$'
+    }]
+  }
+```
+
+## 在执行 bundle.js 时删除
+- npm i -D rimraf
+```json
+  "scripts": {
+    "build": "rimraf build && ./node_modules/.bin/webpack"
+  },
+```
+# 搭建开发环境
+- npm i -D webpack-dev-server
+```json
+"scripts": {
+"build": "rimraf build && ./node_modules/.bin/webpack",    /*生产环境*/
+  "start": "./node_modules/.bin/webpack-dev-server"  /*开发环境*/
+},
+```
+## 自动打开浏览器包
+- npm i -D open-browser-webpack-plugin

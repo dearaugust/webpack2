@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import $ from 'jquery';
+
+import b from './hello.js';
+// b()
+
 import './main.css';
 import './main.less'
-import Img from '../img_0030.jpg';
+import img from '../img_0030.jpg';
+
 let a = <div>
   <p>2dsfsd3211</p>
   {/* <Img style={{width:'100px',height:'122px'}}/> */}
 </div>
 
 ReactDOM.render(<div className='box'>
-  <p>DeatAugust</p>
-  <img src={Img}/>
+  <h1>DeatAugust</h1>
+  <img src={img} />
 </div>,document.getElementById('root'))

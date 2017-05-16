@@ -4,7 +4,7 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        let a = <p>sadasdgsdg</p>
+        <h2>safdqw1232dad</h2>
       </div>
     )
   }
